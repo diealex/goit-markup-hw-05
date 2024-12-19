@@ -50,7 +50,7 @@
         <section class="section-order-service">
             <div class="container order-service-flex">
                 <h1 class="header-one">Effective Solutions for Your Business</h1>
-                <button type="button" class="button-text">Order Service</button>
+                <button type="button" class="order-service-button" data-modal-open>Order Service</button>
             </div>
         </section>
         <!-- #endregion Order service -->
@@ -447,9 +447,98 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="footer-form">
+                <p class="footer-social-title">Subscribe</p>
+                <form>
+                    <input class="footer-input" type="email" id="footer-input" placeholder="E-mail">
+                    <label for="footer-input"></label>
+                    <button type="submit" class="footer-subscribe-btn">
+                        Subscribe
+                        <svg class="social-media-icon-footer" width="24" height="24">
+                            <use href="./images/icons.svg#telegram-icon"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
 
+    <div class="modal-overlay" data-modal>
+        <div class="modal">
+
+            <button class="form-close-button" type="button" data-modal-close>
+                <svg width="8" height="8">
+                    <use href="./images/icons.svg#close-icon" class="form-close-icon" id="data-modal-close"></use>
+                </svg>
+            </button>
+
+            <p class="form-paragraph">Leave your contacts and we will call you back</p>
+
+            <form>
+                <div>
+                    <label class="form-label" for="input-name"> Name
+                        <div class="form-icon-wrapper">
+                            <input class="form-input" type="text" id="input-name" name="input-name" />
+                            <svg width="12" height="12" class="form-icon">
+                                <use href="./images/icons.svg#person-icon">
+                                </use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="form-label" for="input-phone"> Phone
+                        <div class="form-icon-wrapper">
+                            <input class="form-input" type="tel" id="input-phone" name="input-phone" />
+                            <svg width="13" height="13" class="form-icon">
+                                <use href="./images/icons.svg#phone-icon">
+                                </use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="form-label" for="input-email"> Email
+                        <div class="form-icon-wrapper">
+                            <input class="form-input" type="email" id="input-email" name="input-email" />
+                            <svg width="15" height="12" class="form-icon">
+                                <use href="./images/icons.svg#email-icon">
+                                </use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="form-label"> Comment
+                        <textarea class="form-textarea" name="form-comment" rows="5"
+                            placeholder="Text input"></textarea>
+                    </label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                    <input class="form-checkbox visually-hidden" type="checkbox" name="form-checkbox"
+                        id="form-checkbox" />
+                    <label class="form-checkbox-label" for="form-checkbox">
+                        <span class="custom-checkbox">
+                            <svg width="10" height="8" class="custom-checkbox-icon">
+                                <use href="./images/icons.svg#checkbox-icon"></use>
+                            </svg></span>I accept the terms and
+                        conditions
+                        of the <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="form-button">Send</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
