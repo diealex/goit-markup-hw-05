@@ -649,6 +649,8 @@ body {
     right: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    cursor: pointer;
 }
 
 .form-close-icon {
@@ -678,6 +680,10 @@ body {
     margin-bottom: 16px;
 }
 
+.form-item-wrapper {
+    margin-bottom: 8px;
+}
+
 .form-label {
     font-size: 12px;
     font-weight: 400;
@@ -698,39 +704,16 @@ body {
    outline: none;
    padding-left: 38px;
    background-color: transparent;
+   outline: transparent;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
-border: 1px solid var(--iris);
+   border-color: var(--iris);
 }
 
 .form-input:focus + .form-icon {
     fill: var(--iris);
-}
-
-.form-textarea {
-resize: none;
-outline: none;
-width: 100%;
-padding: 8px 16px;
-border: 1px solid var(--navy-blue-modal);
-border-radius: 4px;
-min-height: 120px;
-background-color: transparent;
-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-textarea:focus {
-border: 1px solid var(--iris);
-}
-
-.form-textarea::placeholder {
-    color: var(--navy-blue-modal);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    text-align: left;
 }
 
 .form-icon-wrapper {
@@ -743,6 +726,49 @@ border: 1px solid var(--iris);
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
+    width: 18px;
+    height: 24px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea {
+resize: none;
+outline: none;
+width: 100%;
+padding: 8px 16px;
+border: 1px solid var(--navy-blue-modal);
+border-radius: 4px;
+min-height: 120px;
+background-color: transparent;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+font-size: 12px;
+font-weight: 400;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: var(--navy-blue-modal);
+outline: transparent;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus {
+border-color: var(--iris);
+}
+
+.form-textarea::placeholder {
+    color: var(--navy-blue-modal);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.form-textarea-wrapper {
+    margin-bottom: 16px;
+}
+
+.form-checkbox-wrapper {
+margin-bottom: 24px;
 }
 
 .custom-checkbox {
@@ -756,8 +782,7 @@ border: 1px solid var(--iris);
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-checkbox:checked + .form-checkbox-label .custom-checkbox {
@@ -767,7 +792,6 @@ border: 1px solid var(--iris);
 
 .custom-checkbox-icon {
     fill: transparent;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-checkbox-label {
@@ -781,11 +805,11 @@ border: 1px solid var(--iris);
     color: var(--light-slate);
 }
 
-.form-checkbox:checked + .form-checkbox-label .custom-checkbox-icon {
+.form-checkbox:checked + .form-checkbox-label .custom-checkbox {
     fill: var(--cloud);
 }
 
-.form-checkbox-label > a {
+.form-checkbox-link {
     text-decoration: underline;
     color: var(--iris);
 }
