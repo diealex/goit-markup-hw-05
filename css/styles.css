@@ -527,15 +527,21 @@ body {
     fill: var(--cloud);
 }
 
-.footer-form {
+.footer-form-wrapper {
     margin-left: auto;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
 }
 
 .footer-input {
     border: 1px solid var(--white);
     outline: none;
-    padding: 8px 16px;
-    width: 265px;
+    padding-left: 16px;
+    width: 264px;
     height: 40px;
     background-color: transparent;
     border-radius: 4px;
@@ -545,11 +551,12 @@ body {
     letter-spacing: 0.04em;
     text-align: left;
     color: var(--white);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-input:focus {
-    border: 1px solid var(--green);;
+    border-color: var(--green);;
 }
 
 .footer-input::placeholder {
@@ -562,12 +569,14 @@ body {
 }
 
 .footer-subscribe-btn {
+    cursor: pointer;
     padding: 8px 24px;
     background-color: var(--iris);
     margin-left: 24px;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
-    line-height: 0.67;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
     color: var(--white);
@@ -575,11 +584,16 @@ body {
     height: 40px;
     border: none;
     border-radius: 4px;
-    display: inline-flex;
+    display: flex;
     justify-content: center;  
     align-items: center;
     gap: 16px;   
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-icon {
+    margin-left: 16px;
+    fill: var(--white);
 }
 
 .footer-subscribe-btn:focus, .footer-subscribe-btn:hover {
