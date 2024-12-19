@@ -625,7 +625,10 @@ body {
     border-radius: 4px;
     transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 24px;
+    padding-top: 72px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
 }
 
 .modal-overlay:not(.is-open) .modal {
@@ -644,10 +647,13 @@ body {
     position: absolute;
     top: 24px;
     right: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-close-icon {
     fill: var(--navy-blue);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-close-button:hover,
@@ -679,7 +685,7 @@ body {
     letter-spacing: 0.04em;
     text-align: left;
     display: block;
-    margin-bottom: 4xp;
+    margin-bottom: 4px;
     color: var(--light-slate);
 }
 
@@ -709,9 +715,9 @@ width: 100%;
 padding: 8px 16px;
 border: 1px solid var(--navy-blue-modal);
 border-radius: 4px;
-width: 100%;
 min-height: 120px;
 background-color: transparent;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea:focus {
@@ -750,6 +756,8 @@ border: 1px solid var(--iris);
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-checkbox:checked + .form-checkbox-label .custom-checkbox {
@@ -759,6 +767,7 @@ border: 1px solid var(--iris);
 
 .custom-checkbox-icon {
     fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-checkbox-label {
@@ -778,6 +787,7 @@ border: 1px solid var(--iris);
 
 .form-checkbox-label > a {
     text-decoration: underline;
+    color: var(--iris);
 }
 
 .form-button {
@@ -789,7 +799,6 @@ border: 1px solid var(--iris);
     height: 56px;
     border: none;
     border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     /*button text properties*/
     color: var(--white);
     font-weight: 500;
@@ -798,7 +807,8 @@ border: 1px solid var(--iris);
     letter-spacing: 0.04em;
     text-align: center;
     box-shadow: 0px 4px 4px 0px #00000026;
-    margin: 0 auto;
+    margin: 24px auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .form-button:hover,
